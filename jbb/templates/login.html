@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %} 
+Login
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jblood Bank</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="col col lg-12 md-6 sm-3">
+                
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                            <img src="{% static '/image/logo-bg white.png'%}" alt="logo" width="45" height="45" style="margin-left:45px;" class="d-inline-block align-text-top" >
+                            <p style="color:#EA0000; margin-top:-25px; margin-left: 85px;" ><strong>BLOOD BANK</strong></p>
+                      </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" style="color:#EA0000;" aria-current="page" href="{% url 'home'%}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" style="color:#EA0000;" href="#Services">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" style="color:#EA0000;" href="#REGISTER">Register</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" style="color:#EA0000;" href="{%url 'login' %}">Log In</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                  </nav>
+            </div>
+
+        </div>
+    </header> -->
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col col lg-12 md-6 sm-3 text-center">
+                    <form method="POST">
+                       {% csrf_token %}
+                        <img class="mb-4" src="{% static '/image/logo-bg white.png'%}" alt="logo width="72" height="72">
+                        <h1 class="h3 mb-3 fw-normal" style="color: #EA0000;">Please Log in</h1>
+                    
+                        <div class="form-floating">
+                          <!-- <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"> -->
+                          {{ login_form.username }}
+                          <label for="floatingInput">Email address</label>
+                        </div>
+                         <div class="form-floating">
+                          <!-- <input type="password" class="form-control" id="floatingPassword" placeholder="Password"> -->
+                          {{ login_form.password }}
+                          <label for="floatingPassword">Password</label>
+                        </div> 
+                        
+                        
+                        <!-- <div class="checkbox mb-3">
+                          <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                          </label>
+                        </div> -->
+                        <button class="w-100 btn btn-lg btn-danger" type="submit">Log In</button>
+
+                        <!-- <p class="mt-5 mb-3 text-muted">&copy;Jbloodbank 2022</p> -->
+                    </form>
+                    <br>
+                    <ul class="nav-item">
+                        <a class="nav-link active" style="color:#EA0000;" aria-current="page" href="{% url 'booking'%}">Don't have an account?</a>
+                    </ul>
+                </div>
+                <div class="col col lg-12 md-6 sm-3 ">
+
+                    <img src="{%static '/image/981.jpg'%}" alt="blood donation" style="width:400px; height:400px;"class=" img-flude">
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+{% endblock %}
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->

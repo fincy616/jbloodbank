@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %} 
+Booking
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<form action="" method="POST">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    {{ register_form.email }} 
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter full name</label>
+    {{ register_form.full_name }}
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Address</label>
+    {{ register_form.address }} 
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Height</label>
+    {{ register_form.height }}
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Weight</label>
+    {{ register_form.weight }} 
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Phone number</label>
+    {{ register_form.phn_no }}
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Pincode</label>
+     {{ register_form.pincode }} 
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+    <h6 class="mb-0 me-4">Blood Group: </h6>
+
+    {% for radio in register_form.blood_group %}
+    <div class="form-check form-check-inline mb-0">
+      {{radio.tag}}
+      <label class="form-check-label" for="{{ radio.id_for_label }}">{{ radio.choice_label }}</label>
+    </div>
+
+    {% endfor %}
+  
+  </div>
+  
+
+<div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+    <h6 class="mb-0 me-4">Gender: </h6>
+
+    {% for radio in register_form.gender %}
+    <div class="form-check form-check-inline mb-0">
+      {{radio.tag}}
+      <label class="form-check-label" for="{{ radio.id_for_label }}">{{ radio.choice_label }}</label>
+    </div>
+
+    {% endfor %}
+
+  </div>   
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    {{ register_form.password1}} 
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Confirm password</label>
+    {{ register_form.password2}}
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+{% endblock %}

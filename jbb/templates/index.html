@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %} 
+Home
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <section class=" p-5" id="Home">
+        <div class="container">
+            <div class="row">
+                <div class="col col lg-12 md-6 sm-3">
+
+                    <img src="{% static '/image/logo-bg white.png' %}" alt="logo" style="width:400px; height:400px;"class=" img-flude">
+
+                </div>
+                <div class="col lg-12 md-6 sm-3 p-5">
+                    
+                    <h1 class="mt-5" style="color: #EA0000;">Blood is the rose of the mysterious union</h1>
+                    <h6 class="mt-5" style="color: #EA0000;">If you’re a blood donor, you’re a hero to someone, somewhere, who received your gracious gift of life.</h6>
+                    <br>
+                    <a href="{% url 'login'%}"><button type="button" class="btn btn-danger btn-lg">REQUEST BLOOD</button></a>
+                    <a href="{% url 'booking'%}"><button type="button" class="btn btn-outline-danger btn-lg" >REGISTER</button></a>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5" id="Services">
+        <div class="container">
+            <div class="row">
+                <div class="col lg-12 md-6 sm-3 p-5 ">
+
+                    <p class="text-center" style="color: #EA0000;"><strong>Our Services</strong></p>
+                    <h1 class="mt-5" style="color: #EA0000;">We are linked by blood, and blood is memory without language</h1>
+
+                </div>
+                <div class="col lg-12 md-6 sm-3 ">
+
+                    <img src="{% static '/image/blood_types.jpg' %}" alt="logo" style="width:400px; height:400px;"class=" img-flude">
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col lg-12 md-6 sm-3 ">
+
+                    <div class="card car" style="width: 18rem;">
+                        <img src="{%static '/image/find blood.jpg'%}" class="card-img-top img-flude" alt="find blood">
+                        <div class="card-body">
+                          <h5 class="card-title text-center" style="color:#EA0000;">Find Blood</h5>
+                          <p class="card-text" style="color: #F26060;">Find blood donors near your location and request the needed blood type.</p>
+                        </div>
+                    </div>
+
+                </div> 
+                <div class="col lg-12 md-6 sm-3  ">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="{%static '/image/Get Notified.jpg' %}" class="card-img-top img-flude" alt="Get Notified">
+                        <div class="card-body">
+                          <h5 class="card-title text-center" style="color:#EA0000;">Get Notified</h5>
+                          <p class="card-text" style="color: #F26060;">Get notified about requests instantly,  either on website or by email</p>
+                          
+                        </div>
+                    </div>
+
+                </div> 
+                <div class="col lg-12 md-6 sm-3 ">
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static '/image/Forever Free.jpg' %}" class="card-img-top img-flude" alt="Forever Free">
+                        <div class="card-body">
+                          <h5 class="card-title text-center" style="color:#EA0000;">Forever Free</h5>
+                          <p class="card-text" style="color: #F26060;">You don't have to pay anything, J Blood Bank is forever Free !Blood is a life, pass it on!</p>
+                          
+                        </div>
+                    </div>
+
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <section class=" p-5" id="REGISTER">
+        <div class="container">
+            <div class="row">
+                <div class="col col lg-12 md-6 sm-3">
+
+                    <img src="{% static '/image/give blood.gif'%}" alt="give blood" style="width:400px; height:400px;"class=" img-flude">
+
+                </div>
+                <div class="col lg-12 md-6 sm-3 p-5">
+                    
+                    <h1 class="mt-5" style="color: #EA0000;">Give blood and keep the world beating</h1>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" style="color:#F26060;">The blood is red gold in the time of saving a life.</li>
+                        <li class="list-group-item" style="color:#F26060;">A drop for you, an ocean for someone else</li>
+                        <li class="list-group-item" style="color:#F26060;">Become a donor  and help save lives</li>
+                    </ul>
+                    <br>
+                    <button type="button" class="btn btn-danger btn-lg">Start now</button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col lg-12 md-6 sm-3 ">
+                    <div class="card text-center ">
+                        <div class="card-body">
+                          <h1 class="card-title" style="color: #EA0000;">Best Way to Make A Difference In The Lives Of Others</h1>
+                          <br>
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter the email address" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+
+                          <a href="#" class="btn btn-danger">REGISTER</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

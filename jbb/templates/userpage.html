@@ -1,0 +1,122 @@
+{% extends "userbase.html" %}
+
+{% block title %} 
+User Dashboard
+{% endblock %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col ">
+                
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label" style="color: #EA0000;">Email Id</label>
+                    <div class="card " style="width: 18rem;" >
+                    <div class="card-body">
+                        
+                        <p class="card-text">{{ user.email }}
+                        </p>
+                        
+                    </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Name</label>
+                    <div class="card " style="width: 18rem;" >
+                        <div class="card-body">
+                            
+                            <p class="card-text">{{ user.full_name }}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Address</label>
+                    <div class="card " style="width: 18rem;">
+                        <div class="card-body">
+                            
+                            <p class="card-text">{{ user.address }}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Weight</label>
+                    <div class="card " style="width: 18rem;">
+                        <div class="card-body">
+                            
+                            <p class="card-text">{{ user.weight }}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Height</label>
+                    <div class="card " style="width: 18rem;">
+                        <div class="card-body">
+                            
+                            <p class="card-text"> {{ user.height }}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+
+            </div>
+            <div class="col">
+
+                <div class="row">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Phone number</label>
+                        <div class="card " style="width: 18rem;">
+                            <div class="card-body">
+                                
+                                <p class="card-text">{{ user.phn_no }}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Blood Group</label>
+                        <div class="card " style="width: 18rem;">
+                            <div class="card-body">
+                                
+                                <p class="card-text">{{ user.blood_group }}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Gender</label>
+                        <div class="card " style="width: 18rem;">
+                            <div class="card-body">
+                                
+                                <p class="card-text">{{ user.gender }}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" style="color: #EA0000;">Pincode</label>
+                        <div class="card " style="width: 18rem;">
+                            <div class="card-body">
+                                
+                                <p class="card-text">{{ user.pincode }}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
